@@ -1,0 +1,130 @@
+{
+    "type": "object",
+    "properties": {
+        "list_id": {
+            "required": true,
+            "type": "string"
+        },
+        "requestBody": {
+            "type": "object",
+            "required": [
+                "options"
+            ],
+            "properties": {
+                "options": {
+                    "type": "object",
+                    "title": "Options",
+                    "required": [
+                        "match"
+                    ],
+                    "description": "Options for the segment to preview.",
+                    "properties": {
+                        "match": {
+                            "type": "string",
+                            "title": "Match",
+                            "description": "Match type.",
+                            "enum": [
+                                "any",
+                                "all"
+                            ]
+                        },
+                        "conditions": {
+                            "type": "array",
+                            "title": "Preview Segment Type",
+                            "description": "An array of possible segment conditions.",
+                            "items": {
+                                "oneOf": [
+                                    {
+                                        "type": "object",
+                                        "title": "Signup Source Segment",
+                                        "description": "An individual segment condition",
+                                        "required": [
+                                            "field",
+                                            "condition_type",
+                                            "op"
+                                        ],
+                                        "properties": {
+                                            "condition_type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "SignupSource"
+                                                ],
+                                                "x-value": "SignupSource",
+                                                "title": "Type"
+                                            },
+                                            "field": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "source"
+                                                ],
+                                                "title": "Segment Field",
+                                                "example": "source"
+                                            },
+                                            "op": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "source_is",
+                                                    "source_not"
+                                                ],
+                                                "title": "Segment Operator",
+                                                "description": "Whether the member's signup source was/was not a particular value.",
+                                                "example": "source_is"
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "title": "Segment Data",
+                                                "description": "The signup source.",
+                                                "example": "List Import"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "type": "object",
+                                        "title": "Landing Page Activity Segment",
+                                        "description": "An individual segment condition",
+                                        "properties": {
+                                            "condition_type": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "LandingPageActivity"
+                                                ],
+                                                "x-value": "LandingPageActivity",
+                                                "title": "Type"
+                                            },
+                                            "field": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "landing_page"
+                                                ],
+                                                "title": "Segment Field",
+                                                "example": "source"
+                                            },
+                                            "op": {
+                                                "type": "string",
+                                                "enum": [
+                                                    "signup_on",
+                                                    "not_signup_on"
+                                                ],
+                                                "title": "Segment Operator",
+                                                "description": "Whether the member signed up with a particular page"
+                                            },
+                                            "value": {
+                                                "type": "string",
+                                                "title": "Segment Data",
+                                                "description": "Page ID. Use the ID of the page to segment on"
+                                            }
+                                        }
+                                    }
+                                ],
+                                "discriminator": {
+                                    "propertyName": "condition_type",
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
