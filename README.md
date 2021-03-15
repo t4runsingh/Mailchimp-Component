@@ -1,4 +1,5 @@
-# <img src="./MC_Logo.jpg" width="250" height="250"> Mailchimp Marketing API OIH Connector
+# <p align="center" width="100%"> <img src="./MC_Logo.jpg" width="250" height="250"> </p> 
+# <p align="center" width="100%"> Mailchimp Marketing API OIH Connector </p> 
 
 ## Description
 
