@@ -1,4 +1,4 @@
-# ![LOGO](logo.png) Mailchimp Marketing API OIH Connector
+# ![LOGO](MC_Logo.jpg) Mailchimp Marketing API OIH Connector
 
 ## Description
 
