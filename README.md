@@ -1,5 +1,5 @@
-# ![LOGO](MC_Logo.jpg =250x) Mailchimp Marketing API OIH Connector
-
+# ![LOGO](MC_Logo.jpg =250x ) Mailchimp Marketing API OIH Connector
+<img src="./MC_Logo.jpg" width="250" height="250">
 ## Description
 
 A generated OIH connector for the Mailchimp Marketing API API (version 3.0.34).
