@@ -34,6 +34,18 @@
             "type": "polling",
             "title": "Start Flow",
             "fields": {}
+        },
+        "getListsIdMembers": {
+            "main": "./lib/triggers/getListsIdMembers.js",
+            "type": "polling",
+            "title": "getListsIdMembers",
+            "fields": {}
+        },
+        "getAllListsMembers": {
+            "main": "./lib/triggers/getAllListsMembers.js",
+            "type": "polling",
+            "title": "getAllListsMembers",
+            "fields": {}
         }
     },
     "actions": {
