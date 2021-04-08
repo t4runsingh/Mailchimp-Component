@@ -1,5 +1,5 @@
 {
-    "version": "3.0.37",
+    "version": "3.0.38",
     "main": "component.json",
     "dependencies": {
         "@openintegrationhub/ferryman": "^1.5.0",
