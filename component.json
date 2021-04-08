@@ -1804,6 +1804,21 @@
                 "out": "./lib/schemas/postListsIdMembers.out.json"
             }
         },
+        "upsertListsIdMembers": {
+            "main": "./lib/actions/upsertListsIdMembers.js",
+            "title": "Update existing or add member to list",
+            "description": "Update existing or add a new member to the list.",
+            "fields": {
+                "verbose": {
+                    "viewClass": "CheckBoxView",
+                    "label": "Debug this step (log more data)"
+                }
+            },
+            "metadata": {
+                "in": "./lib/schemas/upsertListsIdMembers.in.json",
+                "out": "./lib/schemas/upsertListsIdMembers.out.json"
+            }
+        },
         "previewSegment": {
             "main": "./lib/actions/previewSegment.js",
             "title": "Preview segment",
